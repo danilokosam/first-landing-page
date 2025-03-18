@@ -1,4 +1,4 @@
-export const ContactPage = () => {
+export const Story = () => {
   return (
     <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
       <h1>Contáctanos</h1>

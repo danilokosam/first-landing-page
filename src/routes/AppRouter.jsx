@@ -2,23 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router";
 import { ROUTES } from "../constants/routes";
 import { MainLayout } from "../layouts/MainLayout.jsx";
-import { AboutPage } from "../pages/AboutPage.jsx";
-import { ContactPage } from "../pages/ContactPage.jsx";
 import { HomePage } from "../pages/HomePage.jsx";
 import { NotFoundPage } from "../pages/NotFoundPage.jsx";
-
-const getRouteComponent = (routeName) => {
-  switch (routeName) {
-    case "Home":
-      return <HomePage />;
-    case "About":
-      return <AboutPage />;
-    case "Contact":
-      return <ContactPage />;
-    default:
-      return <NotFoundPage />;
-  }
-};
+import { getRouteComponent } from "../utils/routeUtils.jsx";
 
 export const AppRouter = () => {
   return (
