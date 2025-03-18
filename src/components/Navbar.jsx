@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 export const Navbar = () => {
   return (
-    <nav>
+    <nav className="">
       <ul style={{ listStyle: "none", display: "flex", gap: "20px" }}>
         <li>
           <NavLink
