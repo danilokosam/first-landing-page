@@ -1,10 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router";
-import { ROUTES } from "../constants/routes";
 import { MainLayout } from "../layouts/MainLayout.jsx";
 import { HomePage } from "../pages/HomePage.jsx";
 import { NotFoundPage } from "../pages/NotFoundPage.jsx";
 import { getRouteComponent } from "../utils/routeUtils.jsx";
+import { ROUTES } from "./routes.js";
 
 export const AppRouter = () => {
   return (
