@@ -37,7 +37,7 @@ export default [
       "import/no-duplicates": "error",
       "prettier/prettier": "error",
       "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
-      indent: ["error", 2],
+      indent: ["error", 2, { SwitchCase: 1 }],
       quotes: ["error", "double"],
       "react-refresh/only-export-components": [
         "warn",

@@ -1,45 +1,22 @@
 import { NavLink } from "react-router";
+import { ROUTES } from "../constants/routes";
 
 export const Navbar = () => {
   return (
-    <nav>
-      <ul style={{ listStyle: "none", display: "flex", gap: "20px" }}>
-        <li>
-          <NavLink
-            to="/"
-            style={({ isActive }) => ({
-              pointerEvents: isActive ? "none" : "auto",
-              color: isActive ? "#888" : "#000",
-              textDecoration: "none",
-            })}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            style={({ isActive }) => ({
-              pointerEvents: isActive ? "none" : "auto",
-              color: isActive ? "#888" : "#000",
-              textDecoration: "none",
-            })}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            style={({ isActive }) => ({
-              pointerEvents: isActive ? "none" : "auto",
-              color: isActive ? "#888" : "#000",
-              textDecoration: "none",
-            })}
-          >
-            Contact
-          </NavLink>
-        </li>
+    <nav className="bg-cyan-600 p-6">
+      <ul className="flex space-x-4">
+        {ROUTES.map((route) => (
+          <li key={route.name}>
+            <NavLink
+              to={route.path}
+              className={({ isActive }) =>
+                `no-underline ${isActive ? "pointer-events-none text-slate-950" : "text-white"}`
+              }
+            >
+              {route.name}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );
