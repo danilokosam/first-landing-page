@@ -1,12 +1,13 @@
 import { Outlet } from "react-router";
+import { FlavorFull } from "../components/FlavorFull";
 import { Navbar } from "../components/Navbar";
 
 export const MainLayout = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-yellow-300">
+    <div className="">
       {/* Navigation */}
       <Navbar />
-      {/* Main content */}
+      <FlavorFull />
       <Outlet />
       {/* Footer */}
       <footer>© 2025 My Awesome Landing Page</footer>
