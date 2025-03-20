@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 
 export const MainLayout = () => {
   return (
-    <div>
+    <div className="mx-auto w-full">
       {/* Navigation */}
       <Navbar />
       <Outlet />
