@@ -1,8 +1,13 @@
+import { C2 } from "../components/C2";
+import { C3 } from "../components/C3";
+import { FlavorFull } from "../components/FlavorFull";
+
 export const HomePage = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <p>This is a simple landing page component.</p>
+      <C2 />
+      <C3 />
+      <FlavorFull />
     </div>
   );
 };
