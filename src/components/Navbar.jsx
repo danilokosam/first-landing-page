@@ -3,8 +3,8 @@ import { ROUTES } from "../constants/routes";
 
 export const Navbar = () => {
   return (
-    <nav className="bg-stone-50 p-4">
-      <div className="flex w-full items-center justify-center gap-11">
+    <nav className="flex w-full items-center justify-center p-4">
+      <div className="flex max-w-7xl items-center justify-center gap-11 bg-gray-200">
         {/* Primera mitad de los enlaces */}
         <ul className="flex space-x-10">
           {ROUTES.slice(0, 3).map((route) => (

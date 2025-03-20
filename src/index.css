@@ -1,6 +1,22 @@
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes:
+    silk --default,
+    aqua --dark;
+}
 
 @theme {
+  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
   --color-amarillo: #f8d94a;
   --color-verde: #99ce4a;
   --color-celeste: #5ac1ee;
