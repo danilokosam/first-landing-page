@@ -7,7 +7,7 @@ export const FlavorFull = () => {
       style={{
         backgroundImage: `url(${wave})`,
       }}
-      className="relative h-[600px] w-full bg-cover lg:h-[380px]"
+      className="relative h-[450px] w-full bg-cover lg:h-[380px]"
     >
       <div className="absolute bottom-2 flex w-full flex-col items-center text-white lg:-bottom-7 lg:left-1/2 lg:max-w-[1000px] lg:-translate-x-1/2 lg:flex-row">
         <div className="">
