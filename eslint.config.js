@@ -32,7 +32,7 @@ export default [
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...jsxA11y.configs.recommended.rules,
-      "import/order": ["error", { alphabetize: { order: "asc" } }],
+      // "import/order": ["error", { alphabetize: { order: "asc" } }],
       // "import/no-unresolved": "error",
       "import/no-duplicates": "error",
       "prettier/prettier": "error",
