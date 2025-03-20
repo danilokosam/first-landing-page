@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 
 export const MainLayout = () => {
   return (
-    <div className="bg-amber-600">
+    <div className="mx-auto w-full">
       {/* Navigation */}
       <Navbar />
       <Outlet />

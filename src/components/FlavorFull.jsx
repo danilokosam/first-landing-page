@@ -13,9 +13,9 @@ export const FlavorFull = () => {
         <div className="">
           <img src={threebottles} alt="" className="w-[350px] lg:w-[600px]" />
         </div>
-        <div className="flex w-[350px] flex-col items-center justify-center text-center lg:w-[600px]">
+        <div className="flex w-full flex-col items-center justify-center text-center lg:w-[600px]">
           <h3 className="text-5xl font-bold lg:text-6xl">Flavor Full!</h3>
-          <p className="mt-2 px-3 lg:mt-4">
+          <p className="mt-2 px-3 text-sm md:text-lg lg:mt-4">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Perferendis qui amet architecto repellendus odio eius eos ut autem.
             Ea quia deleniti officia magnam eaque dolor odit optio cum eos!
