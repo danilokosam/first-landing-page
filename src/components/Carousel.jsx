@@ -7,9 +7,9 @@ export const Carousel = () => {
   console.log(duplicatedImages);
   console.log(img);
   return (
-    <div className="relative my-9 h-auto w-full overflow-hidden bg-blue-900 py-4">
+    <div className="relative my-9 h-auto w-full overflow-hidden bg-zinc-800 py-4">
       <div className="before:blur-3 after:blur-3 absolute inset-0 z-20 before:absolute before:top-0 before:left-0 before:h-full before:w-40 before:bg-gradient-to-r before:from-black before:to-transparent before:filter after:absolute after:top-0 after:right-0 after:h-full after:w-40 after:bg-gradient-to-l after:from-black after:to-transparent after:filter"></div>
-      <div className="flex items-center justify-center pb-4 text-4xl text-fuchsia-500">
+      <div className="flex items-center justify-center pb-4 text-4xl text-gray-200">
         OUR PARTNERS
       </div>
       <motion.div

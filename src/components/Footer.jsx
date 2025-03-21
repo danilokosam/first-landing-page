@@ -9,8 +9,10 @@ export const Footer = () => {
     <footer className="bg-amber-400 py-6 text-black">
       {/* Contenedor */}
       <div className="container mx-auto flex items-center justify-center space-x-4">
-        <span className="text-lg font-bold select-none">STAY CONNECTED!</span>
-        <ul className="flex items-center space-x-3">
+        <span className="text-xs font-bold select-none md:text-sm">
+          STAY CONNECTED!
+        </span>
+        <ul className="flex items-center justify-center space-x-2 md:space-x-3">
           {/* Facebook */}
           <li>
             <a
@@ -22,7 +24,7 @@ export const Footer = () => {
               <FacebookIcon
                 width="2em"
                 height="2m"
-                className="transition-transform duration-500 ease-in-out hover:scale-110"
+                className="h-6 w-6 transition-transform duration-500 ease-in-out hover:scale-110"
               />
             </a>
           </li>
@@ -38,7 +40,7 @@ export const Footer = () => {
               <XIcon
                 width="1.5em"
                 height="1.5m"
-                className="transition-transform duration-500 ease-in-out hover:scale-110"
+                className="h-6 w-6 transition-transform duration-500 ease-in-out hover:scale-110"
               />
             </a>
           </li>
@@ -54,7 +56,7 @@ export const Footer = () => {
               <InstagramIcon
                 width="1.6em"
                 height="1.6m"
-                className="transition-transform duration-500 ease-in-out hover:scale-110"
+                className="h-6 w-6 transition-transform duration-500 ease-in-out hover:scale-110"
               />
             </a>
           </li>
@@ -70,7 +72,7 @@ export const Footer = () => {
               <WhatsAppIcon
                 width="1.6em"
                 height="1.6m"
-                className="transition-transform duration-500 ease-in-out hover:scale-110"
+                className="h-6 w-6 transition-transform duration-500 ease-in-out hover:scale-110"
               />
             </a>
           </li>
@@ -86,7 +88,7 @@ export const Footer = () => {
               <SnapchatIcon
                 width="1.6em"
                 height="1.6m"
-                className="transition-transform duration-500 ease-in-out hover:scale-110"
+                className="h-6 w-6 transition-transform duration-500 ease-in-out hover:scale-110"
               />
             </a>
           </li>
