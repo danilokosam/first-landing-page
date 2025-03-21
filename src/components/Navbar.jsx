@@ -37,7 +37,7 @@ export const Navbar = () => {
         </button>
 
         {/* Enlaces de escritorio */}
-        <div className="hidden w-full justify-between md:flex md:items-center md:justify-evenly">
+        <div className="hidden w-full justify-center gap-11 md:flex md:items-center md:gap-6 lg:gap-12">
           {/* Primera mitad de los enlaces */}
           <ul className="flex space-x-10 md:text-sm lg:text-base">
             {ROUTES.slice(0, 3).map((route) => (
@@ -45,7 +45,11 @@ export const Navbar = () => {
                 <NavLink
                   to={route.path}
                   className={({ isActive }) =>
-                    `no-underline ${isActive ? "pointer-events-none text-yellow-600" : "text-slate-950"}`
+                    `no-underline transition-colors duration-300 ${
+                      isActive
+                        ? "pointer-events-none text-yellow-600"
+                        : "text-slate-950 hover:text-yellow-600"
+                    }`
                   }
                 >
                   {route.name}
@@ -70,7 +74,11 @@ export const Navbar = () => {
                 <NavLink
                   to={route.path}
                   className={({ isActive }) =>
-                    `no-underline ${isActive ? "pointer-events-none text-yellow-600" : "text-slate-950"}`
+                    `no-underline transition-colors duration-300 ${
+                      isActive
+                        ? "pointer-events-none text-yellow-600"
+                        : "text-slate-950 hover:text-yellow-600"
+                    }`
                   }
                 >
                   {route.name}
@@ -103,7 +111,11 @@ export const Navbar = () => {
               <NavLink
                 to={route.path}
                 className={({ isActive }) =>
-                  `block text-xl no-underline ${isActive ? "pointer-events-none text-yellow-600" : "text-slate-950"}`
+                  `block text-xl no-underline transition-colors duration-300 ${
+                    isActive
+                      ? "pointer-events-none text-yellow-600"
+                      : "text-slate-950 hover:text-yellow-600"
+                  }`
                 }
               >
                 {route.name}
