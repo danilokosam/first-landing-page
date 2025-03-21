@@ -1,9 +1,4 @@
 @import "tailwindcss";
-@plugin "daisyui" {
-  themes:
-    silk --default,
-    aqua --dark;
-}
 
 @theme {
   --animate-infinite-scroll: infinite-scroll 25s linear infinite;

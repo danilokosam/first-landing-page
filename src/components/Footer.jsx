@@ -16,7 +16,7 @@ export const Footer = () => {
           {/* Facebook */}
           <li>
             <a
-              href="https://facebook.com"
+              href={"https://facebook.com"}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
