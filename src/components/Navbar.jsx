@@ -39,7 +39,7 @@ export const Navbar = () => {
         {/* Enlaces de escritorio */}
         <div className="hidden w-full justify-center gap-11 md:flex md:items-center md:gap-6 lg:gap-12">
           {/* Primera mitad de los enlaces */}
-          <ul className="flex space-x-10 md:text-sm lg:text-base">
+          <ul className="flex space-x-10 font-medium md:text-sm lg:text-base">
             {ROUTES.slice(0, 3).map((route) => (
               <li key={route.name}>
                 <NavLink
@@ -68,7 +68,7 @@ export const Navbar = () => {
           </div>
 
           {/* Segunda mitad de los enlaces */}
-          <ul className="flex space-x-10 md:text-sm lg:text-base">
+          <ul className="flex space-x-10 font-medium md:text-sm lg:text-base">
             {ROUTES.slice(3).map((route) => (
               <li key={route.name}>
                 <NavLink
