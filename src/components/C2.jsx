@@ -1,9 +1,32 @@
+import { useEffect, useRef, useState } from "react";
+import "animate.css";
 import greenbottle from "../assets/images/greenbottle.png";
 
 export const C2 = () => {
+  const imgRef = useRef(null);
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (!imgRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(true); // Activa la animación
+          setTimeout(() => setAnimate(false), 500); // Desactiva rápido para permitir reinicio
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(imgRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="flex h-125 flex-row justify-center bg-[#FAE161]">
-      {/* Texto Izquierda*/}
+      {/* Texto Izquierda */}
       <div className="mt-11 w-full max-w-sm items-center justify-center p-4">
         <div className="flex-1 text-left">
           <h1 className="text-5xl font-bold text-white">
@@ -32,12 +55,15 @@ export const C2 = () => {
           </button>
         </div>
       </div>
-      {/* Botella Derecha*/}
+      {/* Botella Derecha */}
       <div className="mt-6 hidden md:block md:overflow-hidden">
         <img
+          ref={imgRef}
           src={greenbottle}
           alt="Green Bottle"
-          className="h-168 object-cover"
+          className={`h-auto w-full max-w-lg object-cover ${
+            animate ? "animate__animated animate__jello animate__faster" : ""
+          }`}
         />
       </div>
     </div>
