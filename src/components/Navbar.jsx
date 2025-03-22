@@ -91,7 +91,7 @@ export const Navbar = () => {
 
       {/* Menú móvil */}
       <div
-        className={`mobile-menu fixed top-0 h-full w-[60%] max-w-sm bg-white p-5 duration-500 ease-in-out md:hidden ${
+        className={`mobile-menu fixed top-0 z-200 h-full w-[60%] max-w-sm bg-white p-5 duration-500 ease-in-out md:hidden ${
           nav ? "left-0" : "left-[-100%]"
         }`}
       >

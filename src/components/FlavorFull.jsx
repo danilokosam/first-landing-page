@@ -13,12 +13,12 @@ export const FlavorFull = () => {
           <img
             src={threebottles}
             alt="Three bottles"
-            className="w-full w-max-lg"
+            className="w-max-lg w-full"
           />
         </div>
 
         {/* Contenedor del Texto */}
-        <div className="flex-1 text-center text-white md:mt-5 md:text-left md:ml-6">
+        <div className="flex-1 text-center text-white md:mt-5 md:ml-6 md:text-left">
           <h3 className="text-4xl font-extrabold sm:text-5xl">Flavor Full!</h3>
           <p className="my-2 max-w-sm rounded-lg bg-black/30 p-4 text-lg leading-relaxed md:bg-transparent md:p-0">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
