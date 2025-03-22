@@ -1,39 +1,44 @@
 import { useEffect, useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { FaHome } from "react-icons/fa";
+import { LuChevronLast } from "react-icons/lu";
 import { NavLink } from "react-router";
 import { ROUTES } from "../constants/routes";
+import { GetIconForRoute } from "../utils/GetIconForRoute";
+import { Sidebar, SidebarItem } from "./Sidebar";
 
 export const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
-  const handleNav = () => setNav(!nav);
+  const handleNav = () => setExpanded((curr) => !curr);
 
-  // Cerrar el menú al hacer clic fuera
+  // Cerrar el sidebar al hacer clic fuera
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        nav &&
-        !e.target.closest(".mobile-menu") &&
+        expanded &&
+        !e.target.closest(".sidebar") &&
         !e.target.closest(".menu-button")
       ) {
-        setNav(false);
+        setExpanded(false);
       }
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, [nav]);
+  }, [expanded]);
 
   return (
     <nav className="flex w-full items-center justify-center bg-white p-4">
       <div className="container flex items-center justify-end gap-11 lg:justify-center">
-        {/* Botón para abrir el menú en móvil */}
+        {/* Botón para abrir el menú en móvil, solo visible cuando el sidebar está cerrado */}
         <button
-          className="menu-button block md:hidden"
+          className={`menu-button block rounded-lg bg-gray-50 p-1.5 hover:bg-gray-100 md:hidden ${
+            expanded ? "invisible" : "visible"
+          }`}
           onClick={handleNav}
-          aria-label="Toggle navigation menu"
+          aria-label="Toggle sidebar"
         >
-          {nav ? <AiOutlineClose size={24} /> : <AiOutlineMenu size={24} />}
+          <LuChevronLast /> {/* O LuChevronFirst, según tu caso */}
         </button>
 
         {/* Enlaces de escritorio */}
@@ -89,40 +94,23 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Menú móvil */}
+      {/* Sidebar móvil */}
       <div
-        className={`mobile-menu fixed top-0 z-200 h-full w-[60%] max-w-sm bg-white p-5 duration-500 ease-in-out md:hidden ${
-          nav ? "left-0" : "left-[-100%]"
+        className={`sidebar fixed top-0 z-50 h-full transition-all duration-500 ease-in-out md:hidden ${
+          expanded ? "left-0" : "left-[-100%]"
         }`}
       >
-        <ul className="flex flex-col space-y-4">
-          {ROUTES.map((route) => (
-            <li
-              key={route.name}
-              role="menuitem"
-              tabIndex={0}
-              onClick={() => setNav(false)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  setNav(false);
-                }
-              }}
-            >
-              <NavLink
-                to={route.path}
-                className={({ isActive }) =>
-                  `block text-xl no-underline transition-colors duration-300 ${
-                    isActive
-                      ? "pointer-events-none text-yellow-600"
-                      : "text-slate-950 hover:text-yellow-600"
-                  }`
-                }
-              >
-                {route.name}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <Sidebar expanded={expanded} setExpanded={setExpanded}>
+          {ROUTES.map((route) => {
+            return (
+              <SidebarItem
+                key={route.name}
+                icon={GetIconForRoute(route.name)}
+                text={route.name}
+              />
+            );
+          })}
+        </Sidebar>
       </div>
     </nav>
   );
