@@ -2,7 +2,7 @@ import greenbottle from "../assets/images/greenbottle.png";
 
 export const C2 = () => {
   return (
-    <div className="flex h-125 flex-row justify-center bg-[#FAE161]">
+    <div className="flex h-128 flex-row justify-center bg-[#FAE161]">
       {/* Texto Izquierda*/}
       <div className="mt-11 w-full max-w-sm items-center justify-center p-4">
         <div className="flex-1 text-left">

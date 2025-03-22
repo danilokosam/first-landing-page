@@ -1,4 +1,13 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "CabinetGrotesk";
+  src:
+    url("./assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2"),
+    url("./assets/fonts/CabinetGrotesk-Variable.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap; 
+}
 
 @theme {
   --animate-infinite-scroll: infinite-scroll 25s linear infinite;
