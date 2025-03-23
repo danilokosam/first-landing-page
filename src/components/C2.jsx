@@ -4,7 +4,7 @@ export const C2 = () => {
   return (
     <div className="flex h-128 flex-row justify-center bg-[#FAE161]">
       {/* Texto Izquierda*/}
-      <div className="mt-11 w-full max-w-sm items-center justify-center p-4">
+      <div className="flex h-full w-full max-w-sm items-center justify-center p-4">
         <div className="flex-1 text-left">
           <h1 className="text-5xl font-bold text-white">
             BANANAMILK.
@@ -37,7 +37,7 @@ export const C2 = () => {
         <img
           src={greenbottle}
           alt="Green Bottle"
-          className="h-168 object-cover"
+          className="h-full object-cover"
         />
       </div>
     </div>
