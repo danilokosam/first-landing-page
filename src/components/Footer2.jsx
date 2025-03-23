@@ -3,7 +3,7 @@ import { Icons } from "../assets/icons/react-icons/icons";
 
 export const Footer2 = () => {
   return (
-    <footer className="bg-[#FAE161] py-6">
+    <footer className="bg-gradient-to-tl from-[#E3FF73] to-[#E27C39] py-4">
       {/* Contenedor */}
       <div className="container mx-auto flex items-center justify-center gap-x-8 space-x-8">
         <p className="text-xl leading-none font-extrabold text-[#7E5232] md:text-2xl">

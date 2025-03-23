@@ -10,7 +10,7 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
       <nav
         className="flex h-full flex-col border-r shadow-sm"
         style={{
-          background: "linear-gradient(to bottom, #FAE161, #F7C600)",
+          background: "linear-gradient(to top left, #E3FF73, #E27C39)",
         }}
       >
         <div className="flex items-center justify-between p-4 pb-2">

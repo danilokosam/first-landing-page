@@ -2,8 +2,8 @@ import greenbottle from "../assets/images/greenbottle.png";
 
 export const C2 = () => {
   return (
-    <div className="flex h-128 flex-row justify-center bg-[#FAE161]">
-      {/* Texto Izquierda*/}
+    <div className="flex h-128 flex-row justify-center bg-gradient-to-tl from-[#E3FF73] to-[#E27C39]">
+      {/* Texto Izquierda */}
       <div className="flex h-full w-full max-w-sm items-center justify-center p-4">
         <div className="flex-1 text-left">
           <h1 className="text-5xl font-bold text-white">
@@ -32,12 +32,14 @@ export const C2 = () => {
           </button>
         </div>
       </div>
-      {/* Botella Derecha*/}
-      <div className="mt-6 hidden md:block md:overflow-hidden">
+      {/* Botella Derecha */}
+      <div className="mt-6 hidden h-[500px] md:block md:overflow-hidden">
         <img
           src={greenbottle}
           alt="Green Bottle"
-          className="h-full object-cover"
+          className="h-full object-contain object-center"
+          width="300"
+          height="500"
         />
       </div>
     </div>
