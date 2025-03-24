@@ -6,6 +6,7 @@ export const Findastore = () => {
       style={{
         backgroundImage: `url(${mapbg})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
       <div className="flex h-full w-full flex-col items-center justify-center py-10 text-center text-gray-100 backdrop-brightness-50">
