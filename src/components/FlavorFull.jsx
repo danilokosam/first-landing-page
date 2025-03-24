@@ -20,7 +20,7 @@ export const FlavorFull = () => {
         {/* Contenedor del Texto */}
         <div className="flex-1 text-center text-white md:mt-5 md:ml-6 md:text-left">
           <h3 className="text-4xl font-extrabold sm:text-5xl">Flavor Full!</h3>
-          <p className="my-2 max-w-sm rounded-lg bg-black/30 p-4 text-lg leading-relaxed md:bg-transparent md:p-0">
+          <p className="my-2 max-w-sm rounded-lg p-4 text-lg leading-relaxed md:bg-transparent md:p-0">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Perferendis qui amet architecto repellendus odio eius eos ut autem.
           </p>

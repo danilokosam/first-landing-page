@@ -19,7 +19,7 @@ export const C2 = () => {
           <p className="mt-4 text-left font-bold text-white">Email*</p>
           <input
             type="email"
-            className="w-80 rounded-sm border border-gray-500 bg-white p-1"
+            className="w-80 rounded-sm bg-white p-1 outline-none"
           />
           <div className="mt-4 flex flex-row items-start">
             <input type="checkbox" id="subscribe" className="mt-1 mr-2" />
