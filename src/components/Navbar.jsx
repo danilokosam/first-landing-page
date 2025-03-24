@@ -1,14 +1,17 @@
 import { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { NavLink, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import { ROUTES } from "../constants/routes";
 import { GetIconForRoute } from "../utils/GetIconForRoute";
+import { Logo } from "./Logo";
+import { NavLinks } from "./NavLinks";
 import { Sidebar, SidebarItem } from "./Sidebar";
 
 export const Navbar = () => {
   const [expanded, setExpanded] = useState(false);
   const location = useLocation();
   const prevLocationRef = useRef(location);
+  const midPoint = Math.ceil(ROUTES.length / 2); // Calcula el punto medio para las rutas
 
   const handleNav = () => {
     console.log("Botón hamburguesa clicado, expanded actual:", expanded);
@@ -49,11 +52,7 @@ export const Navbar = () => {
       <nav className="flex w-full items-center justify-center p-3">
         <div className="container flex items-center justify-between gap-11 lg:justify-center">
           <div className="block p-2 md:hidden">
-            <img
-              src="/src/assets/images/logo.png"
-              alt="Logo"
-              className="h-10"
-            />
+            <Logo />
           </div>
           {/* Botón para abrir el menú en móvil, solo visible cuando el sidebar está cerrado */}
           <button
@@ -69,53 +68,15 @@ export const Navbar = () => {
           {/* Enlaces de escritorio */}
           <div className="hidden w-full justify-center gap-11 md:flex md:items-center md:gap-6 lg:gap-12">
             {/* Primera mitad de los enlaces */}
-            <ul className="flex space-x-10 font-medium md:text-sm lg:text-base">
-              {ROUTES.slice(0, 3).map((route) => (
-                <li key={route.name}>
-                  <NavLink
-                    to={route.path}
-                    className={({ isActive }) =>
-                      `no-underline transition-colors duration-300 ${
-                        isActive
-                          ? "pointer-events-none text-yellow-600"
-                          : "text-slate-950 hover:text-yellow-600"
-                      }`
-                    }
-                  >
-                    {route.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            <NavLinks routes={ROUTES.slice(0, midPoint)} />
 
             {/* Logo */}
             <div className="hidden md:block">
-              <img
-                src="/src/assets/images/logo.png"
-                alt="Logo"
-                className="h-20"
-              />
+              <Logo className="h-20" />
             </div>
 
             {/* Segunda mitad de los enlaces */}
-            <ul className="flex space-x-10 font-medium md:text-sm lg:text-base">
-              {ROUTES.slice(3).map((route) => (
-                <li key={route.name}>
-                  <NavLink
-                    to={route.path}
-                    className={({ isActive }) =>
-                      `no-underline transition-colors duration-300 ${
-                        isActive
-                          ? "pointer-events-none text-yellow-600"
-                          : "text-slate-950 hover:text-yellow-600"
-                      }`
-                    }
-                  >
-                    {route.name}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            <NavLinks routes={ROUTES.slice(midPoint)} />
           </div>
         </div>
 

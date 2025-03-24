@@ -3,7 +3,7 @@ import { FiMoreVertical } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { LuChevronLast } from "react-icons/lu";
 import { NavLink } from "react-router";
-import logo from "../assets/images/logo.png";
+import { Logo } from "./Logo";
 
 const SidebarContext = createContext();
 
@@ -17,10 +17,8 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
         }}
       >
         <div className="flex items-center justify-between p-4 pb-2">
-          <img
-            src={logo}
+          <Logo
             className={`overflow-hidden transition-all ${expanded ? "h-10" : "h-0 w-0"}`}
-            alt="logo"
           />
           {/*  Botón para cerrar el sidebar en móviles */}
           <button
