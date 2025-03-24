@@ -30,7 +30,7 @@ export const Carousel = () => {
             className="flex-shrink-0"
             style={{ width: `${100 / img.length}%` }}
           >
-            <div className="flex h-17 items-center justify-center border-y border-gray-300 md:h-20 lg:h-24">
+            <div className="flex h-17 items-center justify-center md:h-20 lg:h-24">
               <img src={image.image} alt={image.alt} className="max-h-full" />
             </div>
           </div>

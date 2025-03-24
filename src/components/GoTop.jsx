@@ -35,7 +35,7 @@ export const GoTop = () => {
       onKeyDown={handleKeyDown}
       className={`${
         showGoTop ? "block" : "hidden"
-      } fixed bottom-[12%] left-[90%] z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-[25px] bg-[rgba(252,248,241,0.8)] text-center leading-[30px] shadow-[2px_2px_5px_#FFC107] transition-transform duration-300 hover:scale-110`}
+      } fixed bottom-[12%] left-[95%] z-50 flex h-10 w-10 cursor-pointer items-center justify-center rounded-[25px] bg-[rgba(252,248,241,0.8)] text-center leading-[30px] shadow-[2px_2px_5px_#FFC107] transition-transform duration-300 hover:scale-110`}
       aria-label="Volver arriba"
       tabIndex={0}
     >
