@@ -25,14 +25,14 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
           {/*  Botón para cerrar el sidebar en móviles */}
           <button
             onClick={() => setExpanded((curr) => !curr)}
-            className="rounded-lg bg-gray-50 p-1.5 hover:bg-gray-100"
+            className="cursor-pointer rounded-lg bg-gray-50 p-1.5 hover:bg-gray-100"
           >
             {expanded ? <IoMdClose /> : <LuChevronLast />}
           </button>
           {/*  Botón para cerrar el sidebar en móviles */}
         </div>
 
-        <SidebarContext.Provider value={{ expanded }}>
+        <SidebarContext.Provider value={{ expanded, setExpanded }}>
           <ul className="flex-1 px-3">{children}</ul>
         </SidebarContext.Provider>
 
@@ -60,11 +60,18 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
 };
 
 export const SidebarItem = ({ icon, text, to, alert }) => {
-  const { expanded } = useContext(SidebarContext);
+  const { expanded, setExpanded } = useContext(SidebarContext);
+
+  const handleClick = () => {
+    if (expanded) {
+      setExpanded(false);
+    }
+  };
   return (
     <li className="group relative my-1">
       <NavLink
         to={to}
+        onClick={handleClick}
         className={({ isActive }) =>
           `flex items-center rounded-md px-3 py-2 font-medium transition-colors ${
             isActive

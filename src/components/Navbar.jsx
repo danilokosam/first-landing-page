@@ -1,15 +1,32 @@
-import { useEffect, useState } from "react";
-import { LuChevronLast } from "react-icons/lu";
+import { useEffect, useRef, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 import { ROUTES } from "../constants/routes";
 import { GetIconForRoute } from "../utils/GetIconForRoute";
 import { Sidebar, SidebarItem } from "./Sidebar";
 
 export const Navbar = () => {
   const [expanded, setExpanded] = useState(false);
+  const location = useLocation();
+  const prevLocationRef = useRef(location);
 
-  const handleNav = () => setExpanded((curr) => !curr);
+  const handleNav = () => {
+    console.log("Botón hamburguesa clicado, expanded actual:", expanded);
+    setExpanded((curr) => !curr);
+  };
+
+  // Cierra el sidebar cuando cambia la ruta
+  useEffect(() => {
+    if (location !== prevLocationRef.current && expanded) {
+      setExpanded(false);
+    }
+    prevLocationRef.current = location; // Actualiza la referencia con la nueva ubicación
+  }, [location, expanded]);
+
+  // Log para depuración
+  useEffect(() => {
+    console.log("El estado expanded cambió a:", expanded);
+  }, [expanded]);
 
   // Cerrar el sidebar al hacer clic fuera
   useEffect(() => {
