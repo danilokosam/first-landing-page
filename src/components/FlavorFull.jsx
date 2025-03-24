@@ -24,8 +24,8 @@ export const FlavorFull = () => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Perferendis qui amet architecto repellendus odio eius eos ut autem.
           </p>
-          <button className="bg-verde mt-4 rounded-md px-6 py-3 text-lg font-semibold text-white transition-transform duration-300 hover:scale-105 hover:bg-green-700">
-            LEARN MORE
+          <button className="bg-verde mt-4 rounded-md px-6 py-3 text-lg font-semibold text-white transition-transform">
+            <a href="#">Learn more</a>
           </button>
         </div>
       </div>
