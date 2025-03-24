@@ -115,6 +115,7 @@ export const Navbar = () => {
                   key={route.name}
                   icon={GetIconForRoute(route.name)}
                   text={route.name}
+                  to={route.path}
                 />
               );
             })}

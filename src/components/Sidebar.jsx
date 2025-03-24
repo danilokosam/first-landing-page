@@ -1,7 +1,8 @@
 import { createContext, useContext } from "react";
 import { FiMoreVertical } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
-import { LuChevronFirst, LuChevronLast } from "react-icons/lu";
+import { LuChevronLast } from "react-icons/lu";
+import { NavLink } from "react-router";
 import logo from "../assets/images/logo.png";
 
 const SidebarContext = createContext();
@@ -21,18 +22,21 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
             className={`overflow-hidden transition-all ${expanded ? "h-10" : "h-0 w-0"}`}
             alt="logo"
           />
+          {/*  Botón para cerrar el sidebar en móviles */}
           <button
             onClick={() => setExpanded((curr) => !curr)}
             className="rounded-lg bg-gray-50 p-1.5 hover:bg-gray-100"
           >
             {expanded ? <IoMdClose /> : <LuChevronLast />}
           </button>
+          {/*  Botón para cerrar el sidebar en móviles */}
         </div>
 
         <SidebarContext.Provider value={{ expanded }}>
           <ul className="flex-1 px-3">{children}</ul>
         </SidebarContext.Provider>
 
+        {/* Perfil de Usuario */}
         <div className="flex border-t p-3">
           <img
             src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
@@ -49,37 +53,42 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
             <FiMoreVertical size={20} />
           </div>
         </div>
+        {/* Perfil de Usuario */}
       </nav>
     </aside>
   );
 };
 
-export const SidebarItem = ({ icon, text, active, alert }) => {
+export const SidebarItem = ({ icon, text, to, alert }) => {
   const { expanded } = useContext(SidebarContext);
   return (
-    <li
-      className={`group relative my-1 flex cursor-pointer items-center rounded-md px-3 py-2 font-medium transition-colors ${
-        active
-          ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-          : "text-gray-600 hover:bg-indigo-50"
-      } `}
-    >
-      {icon}
-      <span
-        className={`overflow-hidden transition-all ${
-          expanded ? "ml-3 w-52" : "w-0"
-        }`}
+    <li className="group relative my-1">
+      <NavLink
+        to={to}
+        className={({ isActive }) =>
+          `flex items-center rounded-md px-3 py-2 font-medium transition-colors ${
+            isActive
+              ? "bg-white text-yellow-600"
+              : "text-black hover:bg-indigo-50"
+          }`
+        }
       >
-        {text}
-      </span>
-      {alert && (
-        <div
-          className={`absolute right-2 h-2 w-2 rounded bg-indigo-400 ${
-            expanded ? "" : "top-2"
+        {icon}
+        <span
+          className={`overflow-hidden transition-all ${
+            expanded ? "ml-3 w-52" : "w-0"
           }`}
-        />
-      )}
-
+        >
+          {text}
+        </span>
+        {alert && (
+          <div
+            className={`absolute right-2 h-2 w-2 rounded bg-indigo-400 ${
+              expanded ? "" : "top-2"
+            }`}
+          />
+        )}
+      </NavLink>
       {!expanded && (
         <div
           className={
