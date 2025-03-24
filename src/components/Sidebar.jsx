@@ -1,6 +1,8 @@
 import { createContext, useContext } from "react";
 import { FiMoreVertical } from "react-icons/fi";
+import { IoMdClose } from "react-icons/io";
 import { LuChevronFirst, LuChevronLast } from "react-icons/lu";
+import logo from "../assets/images/logo.png";
 
 const SidebarContext = createContext();
 
@@ -15,15 +17,15 @@ export const Sidebar = ({ children, expanded, setExpanded }) => {
       >
         <div className="flex items-center justify-between p-4 pb-2">
           <img
-            src="https://img.logoipsum.com/243.svg"
-            className={`overflow-hidden transition-all ${expanded ? "h-20 w-20" : "h-0 w-0"}`}
+            src={logo}
+            className={`overflow-hidden transition-all ${expanded ? "h-10" : "h-0 w-0"}`}
             alt="logo"
           />
           <button
             onClick={() => setExpanded((curr) => !curr)}
             className="rounded-lg bg-gray-50 p-1.5 hover:bg-gray-100"
           >
-            {expanded ? <LuChevronFirst /> : <LuChevronLast />}
+            {expanded ? <IoMdClose /> : <LuChevronLast />}
           </button>
         </div>
 
