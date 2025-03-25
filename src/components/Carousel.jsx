@@ -8,7 +8,7 @@ export const Carousel = () => {
       <div className="mb-4 hidden items-center justify-center py-3 text-sm font-bold text-white md:flex md:text-3xl lg:text-5xl">
         OUR PARTNERS
       </div>
-      <Marquee speed={100} gradient={false}>
+      <Marquee speed={50} gradient={false}>
         {imgImports.map((image, index) => (
           <div
             key={index}

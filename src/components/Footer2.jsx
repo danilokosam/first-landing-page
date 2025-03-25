@@ -3,7 +3,7 @@ import { Icons } from "../assets/icons/react-icons/icons";
 
 export const Footer2 = () => {
   return (
-    <footer className="w-full bg-yellow-500 py-4">
+    <footer className="w-full bg-white py-4">
       {/* Contenedor */}
       <div className="container mx-auto flex items-center justify-center gap-10">
         <p className="text-sm leading-none font-extrabold text-[#7E5232] md:text-lg">

@@ -2,7 +2,7 @@ import greenbottle from "../assets/images/greenbottle.png";
 
 export const C2 = () => {
   return (
-    <div className="flex h-130 w-full flex-row justify-center bg-gradient-to-tl from-[#E3FF73] to-[#e58f56]">
+    <div className="w-ful flex h-130 items-center border-2 border-amber-950 bg-gradient-to-tl from-[#E3FF73] to-[#e58f56]">
       {/* Texto Izquierda */}
       <div className="container mx-auto flex h-full w-full max-w-sm items-center justify-center p-4">
         <div className="flex-1">
@@ -36,13 +36,11 @@ export const C2 = () => {
         </div>
       </div>
       {/* Botella Derecha */}
-      <div className="mt-6 hidden h-[500px] py-5 md:block md:overflow-hidden">
+      <div className="hidden h-[500px] border-2 border-b-amber-800 md:block md:overflow-hidden">
         <img
           src={greenbottle}
           alt="Green Bottle"
           className="h-full object-contain object-center"
-          width="300"
-          height="500"
         />
       </div>
     </div>
