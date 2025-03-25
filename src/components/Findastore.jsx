@@ -10,7 +10,7 @@ export const Findastore = () => {
       }}
       className="w-full"
     >
-      <div className="flex h-full w-full flex-col items-center justify-center py-2 text-center text-gray-100 backdrop-brightness-50">
+      <div className="flex h-full w-full flex-col items-center justify-center py-5 text-center text-gray-100 backdrop-brightness-50">
         <h3 className="text-3xl font-bold md:text-5xl">Find a Store</h3>
         <p className="p-2 text-sm md:w-[600px] md:text-base lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni harum

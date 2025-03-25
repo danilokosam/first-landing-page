@@ -1,10 +1,11 @@
 import greenbottle from "../assets/images/greenbottle.png";
+import Button from "./button";
 
 export const C2 = () => {
   return (
-    <div className="w-ful flex h-130 items-center border-2 border-amber-950 bg-gradient-to-tl from-[#E3FF73] to-[#e58f56]">
+    <div className="flex h-130 w-full items-center justify-center gap-8 bg-gradient-to-tl from-[#E3FF73] to-[#e58f56] p-6">
       {/* Texto Izquierda */}
-      <div className="container mx-auto flex h-full w-full max-w-sm items-center justify-center p-4">
+      <div className="flex h-full w-full max-w-sm items-center justify-center">
         <div className="flex-1">
           <h1 className="text-center text-3xl font-bold text-white select-none md:text-left lg:text-5xl">
             BANANAMILK.
@@ -27,16 +28,17 @@ export const C2 = () => {
               Keep me updated on Mooala deals and promotions!
             </label>
           </div>
-          <a
+          <Button text={"EMAIL COUPON"} />
+          {/* <a
             href="#"
             className="flex items-center justify-center bg-[#99ce4a] px-6 py-2 font-bold text-white transition-all duration-300 hover:bg-[#6b9e34]"
           >
             EMAIL COUPON
-          </a>
+          </a> */}
         </div>
       </div>
       {/* Botella Derecha */}
-      <div className="hidden h-[500px] border-2 border-b-amber-800 md:block md:overflow-hidden">
+      <div className="hidden h-[500px] md:block md:overflow-hidden">
         <img
           src={greenbottle}
           alt="Green Bottle"
