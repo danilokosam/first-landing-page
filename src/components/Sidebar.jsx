@@ -9,7 +9,7 @@ const SidebarContext = createContext();
 
 export const Sidebar = ({ children, expanded, setExpanded }) => {
   return (
-    <aside className="h-screen">
+    <aside className="h-full">
       <nav
         className="flex h-full w-full flex-col border-r shadow-sm"
         style={{
