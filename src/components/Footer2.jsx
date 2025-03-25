@@ -3,14 +3,15 @@ import { Icons } from "../assets/icons/react-icons/icons";
 
 export const Footer2 = () => {
   return (
-    <footer className="bg-gradient-to-tl from-white to-[#E0E0E0] py-4">
+    <footer className="w-full bg-yellow-500 py-4">
       {/* Contenedor */}
       <div className="container mx-auto flex items-center justify-center gap-10">
-        <p className="text-md leading-none font-extrabold text-[#7E5232] md:text-lg">
-          STAY <span className="block w-full">CONNECTED!</span>
+        <p className="text-sm leading-none font-extrabold text-[#7E5232] md:text-lg">
+          STAY{" "}
+          <span className="block w-full text-sm md:text-lg">CONNECTED!</span>
         </p>
 
-        <ul className="flex items-center justify-center space-x-2 md:space-x-3 lg:space-x-1">
+        <ul className="flex items-center justify-center space-x-1 md:space-x-3 lg:space-x-1">
           {Icons.map((item) => {
             const IconComponent = item.icon;
             return (
@@ -22,7 +23,7 @@ export const Footer2 = () => {
                   aria-label={item.name}
                   className="text-white"
                 >
-                  <IconComponent className="h-6 w-6 transition-transform duration-500 ease-in-out hover:scale-110" />
+                  <IconComponent className="h-4 w-4 transition-transform duration-500 ease-in-out hover:scale-110 md:h-5 md:w-5" />
                 </a>
               </li>
             );

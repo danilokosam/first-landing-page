@@ -10,8 +10,12 @@ export const C3 = () => {
       </p>
 
       <div className="relative my-12 inline-block">
-        <img src="/src/assets/images/viñeta.png" alt="" className="w-full" />
-        <p className="absolute inset-0 flex items-center justify-center text-center text-xs font-semibold text-white sm:text-sm md:text-base">
+        <img
+          src="/src/assets/images/viñeta.png"
+          alt="receta"
+          className="h-20 w-full"
+        />
+        <p className="absolute inset-0 flex items-center justify-center p-5 text-center text-xs font-semibold text-white md:text-base">
           USDA ORGANIC • NON-GMO • 60 CALORIES • 6 INGREDIENTS
         </p>
       </div>

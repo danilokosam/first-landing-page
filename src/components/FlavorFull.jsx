@@ -18,15 +18,18 @@ export const FlavorFull = () => {
         </div>
 
         {/* Contenedor del Texto */}
-        <div className="flex-1 text-center text-white md:mt-5 md:ml-6 md:text-left">
+        <div className="flex flex-1 flex-col items-center justify-center text-white md:mt-5 md:ml-6 md:text-left">
           <h3 className="text-4xl font-extrabold sm:text-5xl">Flavor Full!</h3>
-          <p className="my-2 max-w-sm rounded-lg p-4 text-lg leading-relaxed md:bg-transparent md:p-0">
+          <p className="my-2 rounded-lg p-4 text-sm md:text-base leading-relaxed md:bg-transparent md:p-0 lg:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Perferendis qui amet architecto repellendus odio eius eos ut autem.
           </p>
-          <button className="bg-verde mt-4 rounded-md px-6 py-3 text-lg font-semibold text-white transition-transform">
-            <a href="#">Learn more</a>
-          </button>
+          <a
+            href="#"
+            className="flex w-40 items-center justify-center bg-[#99ce4a] px-6 py-2 font-bold text-white transition-all duration-300 hover:bg-[#6b9e34]"
+          >
+            Learn more
+          </a>
         </div>
       </div>
     </div>

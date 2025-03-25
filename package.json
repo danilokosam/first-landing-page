@@ -14,7 +14,6 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
     "@uidotdev/usehooks": "^2.4.1",
-    "motion": "^12.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-fast-marquee": "^1.6.5",
