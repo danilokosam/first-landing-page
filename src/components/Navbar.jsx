@@ -82,7 +82,7 @@ export const Navbar = () => {
 
         {/* Sidebar móvil */}
         <div
-          className={`sidebar fixed top-0 z-50 h-full w-4/6 transition-all duration-500 ease-in-out md:hidden ${
+          className={`sidebar fixed top-0 z-50 h-dvh w-4/6 transition-all duration-500 ease-in-out md:hidden ${
             expanded ? "left-0" : "left-[-100%]"
           }`}
         >
