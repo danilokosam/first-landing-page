@@ -18,9 +18,9 @@ export const FlavorFull = () => {
         </div>
 
         {/* Contenedor del Texto */}
-        <div className="flex flex-1 flex-col items-center justify-center text-white md:mt-5 md:ml-6 md:text-left">
-          <h3 className="text-4xl font-extrabold sm:text-5xl">Flavor Full!</h3>
-          <p className="my-2 rounded-lg p-4 text-sm leading-relaxed md:bg-transparent md:p-0 md:text-base lg:text-lg">
+        <div className="flex max-w-5xl flex-1 flex-col items-center text-white md:mt-5 md:ml-6 md:items-start md:justify-center">
+          <h3 className="text-5xl font-extrabold sm:text-5xl">Flavor Full!</h3>
+          <p className="my-2 max-w-100 rounded-lg p-4 text-sm leading-relaxed md:bg-transparent md:p-0 md:text-base lg:text-lg">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Perferendis qui amet architecto repellendus odio eius eos ut autem.
           </p>

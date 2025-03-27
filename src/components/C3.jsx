@@ -2,7 +2,7 @@ import viñeta from "../assets/images/viñeta.png";
 
 export const C3 = () => {
   return (
-    <div className="w-full bg-white p-8 text-center">
+    <div className="w-full bg-white px-8 pt-8 text-center">
       <h2 className="text-5xl font-bold text-[#67829F]">IT'S BANANAS!</h2>
       <p className="mx-auto mt-5 max-w-2xl max-sm:text-justify">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum,

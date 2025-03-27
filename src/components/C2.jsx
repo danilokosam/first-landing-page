@@ -7,17 +7,17 @@ export const C2 = () => {
       {/* Texto Izquierda */}
       <div className="flex h-full w-full max-w-sm items-center justify-center">
         <div className="flex-1">
-          <h1 className="text-center text-3xl font-bold text-white select-none md:text-left lg:text-5xl">
+          <h1 className="text-3xl font-bold text-white select-none md:text-left lg:text-5xl">
             BANANAMILK.
             <br />
             It's A Thing.
           </h1>
-          <p className="p-2 text-sm font-bold text-white">
+          <p className="my-5 text-sm font-bold text-white">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
             suscipit, earum assumenda dolorem, repudiandae minima blanditiis
             maiores deleniti excepturi ut, sed officia quod quae id quaerat.
           </p>
-          <p className="p-2 text-left font-bold text-white">Email*</p>
+          <p className="py-2 text-left font-bold text-white">Email*</p>
           <input
             type="email"
             className="w-full rounded-sm bg-white p-1 outline-none"
@@ -38,7 +38,7 @@ export const C2 = () => {
         </div>
       </div>
       {/* Botella Derecha */}
-      <div className="hidden h-[500px] md:block md:overflow-hidden">
+      <div className="h-[500px]">
         <img
           src={greenbottle}
           alt="Green Bottle"

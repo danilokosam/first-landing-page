@@ -14,7 +14,6 @@ export const Navbar = () => {
   const midPoint = Math.ceil(ROUTES.length / 2); // Calcula el punto medio para las rutas
 
   const handleNav = () => {
-    console.log("Botón hamburguesa clicado, expanded actual:", expanded);
     setExpanded((curr) => !curr);
   };
 
@@ -27,9 +26,9 @@ export const Navbar = () => {
   }, [location, expanded]);
 
   // Log para depuración
-  useEffect(() => {
-    console.log("El estado expanded cambió a:", expanded);
-  }, [expanded]);
+  // useEffect(() => {
+  //   console.log("El estado expanded cambió a:", expanded);
+  // }, [expanded]);
 
   // Cerrar el sidebar al hacer clic fuera
   useEffect(() => {
